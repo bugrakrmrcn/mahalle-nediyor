@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>MahalleNEDİYOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="images/mahalle-logo.png" id="navbar-logo" class="navbar-logo-img" alt="MahalleNEDİYOR Logo" style="height:48px;cursor:pointer;">
+            <span class="navbar-logo-text">MahalleNEDİYOR</span>
+            <div class="navbar-links">
+                <button id="nav-hayvanlar" class="navbar-link active">Hayvanlar</button>
+                <button id="nav-mahalle" class="navbar-link">Mahalle Uygulaması</button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="hayvanlar-section">
+        <h1>Hayvan Sesleri</h1>
+        <div class="animal-container"></div>
+    </div>
+    <div id="mahalle-section" style="display:none;">
+        <h1>İzmir Mahalle Sorun Bildirimi</h1>
+        <div id="mahalle-app"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

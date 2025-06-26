@@ -1,0 +1,241 @@
+body {
+    background: url('images/bulut.jpg') no-repeat center center fixed, linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    background-size: cover;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    min-height: 100vh;
+    transition: background 0.5s;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 2.5rem;
+    color: #374151;
+    letter-spacing: 2px;
+}
+
+.animal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.animal-card {
+    background: #fffbe7;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(255,179,0,0.13);
+    padding: 24px 18px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    border: 2px solid #ffb300;
+    transition: box-shadow 0.18s, border 0.18s, transform 0.18s;
+}
+
+.animal-card:hover {
+    box-shadow: 0 8px 32px rgba(255,179,0,0.18);
+    border: 2px solid #ff6f00;
+    transform: translateY(-4px) scale(1.04);
+}
+
+.animal-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 14px;
+    border: 3px solid #ffb300;
+    background: #fff;
+}
+
+.animal-button {
+    background: linear-gradient(90deg, #ffb300 0%, #ff6f00 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255,179,0,0.10);
+    transition: background 0.18s, transform 0.13s;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+
+.animal-button:hover {
+    background: linear-gradient(90deg, #ff6f00 0%, #ffb300 100%);
+    transform: scale(1.07);
+}
+
+@media (max-width: 700px) {
+    .animal-container {
+        gap: 18px;
+    }
+    .animal-card {
+        width: 130px;
+        padding: 10px 4px 8px 4px;
+    }
+    .animal-card img {
+        width: 60px;
+        height: 60px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    body {
+        padding: 0 4px;
+    }
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    border-bottom: 3px solid #ffb300;
+    box-shadow: 0 2px 12px rgba(34,34,34,0.08);
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+}
+.navbar-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 24px;
+    height: 64px;
+    gap: 18px;
+}
+.navbar-logo-img {
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255,179,0,0.13);
+    background: #fff;
+}
+.navbar-logo-text {
+    color: #ffb300;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-right: 32px;
+    text-shadow: 0 2px 8px #fff8;
+}
+.navbar-links {
+    display: flex;
+    gap: 12px;
+}
+.navbar-link {
+    background: none;
+    border: none;
+    color: #222;
+    font-size: 1.08rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 0.5px;
+}
+.navbar-link.active, .navbar-link:hover {
+    color: #ffb300;
+    background: #fffbe7;
+    border-bottom: 3px solid #ffb300;
+}
+
+#mahalle-section, #hayvanlar-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 32px;
+}
+
+#mahalle-app {
+    margin-top: 32px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(255,179,0,0.10), 0 1.5px 6px rgba(34,34,34,0.08);
+    padding: 32px 24px;
+    min-height: 200px;
+    border: 1.5px solid #ececec;
+}
+
+@media (max-width: 700px) {
+    .navbar-container {
+        padding: 0 6px;
+    }
+    .navbar-logo-text {
+        font-size: 1.1rem;
+    }
+    #mahalle-section, #hayvanlar-section {
+        padding-top: 18px;
+    }
+    #mahalle-app {
+        padding: 16px 4px;
+    }
+}
+
+h1, h2 {
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+select, textarea {
+    font-size: 1rem;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1.5px solid #e0e0e0;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fafbfc;
+    color: #222;
+    transition: border 0.15s;
+}
+select:focus, textarea:focus {
+    border: 1.5px solid #e30a17;
+    outline: none;
+}
+
+label {
+    font-weight: 500;
+    color: #444;
+    margin-top: 10px;
+    display: block;
+}
+
+ul {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+/* Ateş animasyonu için */
+.fire-anim {
+    position: absolute;
+    pointer-events: none;
+    width: 60px;
+    height: 80px;
+    z-index: 1000;
+    animation: fire-pop 0.8s cubic-bezier(.7,-0.2,.7,1.5) forwards;
+}
+@keyframes fire-pop {
+    0% { opacity: 0; transform: scale(0.5) translateY(20px); }
+    30% { opacity: 1; transform: scale(1.1) translateY(-10px); }
+    70% { opacity: 1; transform: scale(1) translateY(-20px); }
+    100% { opacity: 0; transform: scale(0.7) translateY(-40px); }
+}
